@@ -1,0 +1,41 @@
+string = texto
+
+
+boolean---
+
+var value1= true  (on) o 1
+
+var value2 = false false (off) o 0
+
+
+----
+
+array 
+
+caja que contien cajas
+
+
+-----
+
+= { }  declaro un objeto
+
+-----
+
+
+
+parseFloat(variableConDecimales, 10)  
+
+parseInt(variableSinDecimales, 10) 
+
+
+Esto te transforma cualqueir string '4' en numero 4
+
+
+---------
+
+porcentual % 2 y me da 0 es un numero par si me da 1 es impar
+
+-------
+
+
+Todo lo que escribas en el prompt te lo devuele en string ''
