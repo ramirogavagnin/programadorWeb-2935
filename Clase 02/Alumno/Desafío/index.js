@@ -18,7 +18,7 @@ var undefinedMayor = ('Sx. usted es mayor de edad, puede ingresar.')
 
 var undefinedMinor = ('Sx. usted es menor de edad, no puede ingresar.')
 
-/* var incorrectGender = ('El género ingresado no es válido. Inténtalo de nuevo!') */
+var incorrectGender = ('El género ingresado no es válido. Inténtalo de nuevo!')
 
 
 
@@ -60,8 +60,8 @@ if (gender === ('Undefined') || gender === ('undefined')) {
 /* --------- */
 
 
-/* if (gender !== ('Male') || gender !== ('male') || gender !== ('Female') || gender !== ('female') || gender !== ('Undefined') || gender === ('undefined')) {
+if (gender !== ('Male') || gender !== ('male') || gender !== ('Female') || gender !== ('female') || gender !== ('Undefined') || gender === ('undefined')) {
 console.log(incorrectGender)
 
 
-} */
+}
