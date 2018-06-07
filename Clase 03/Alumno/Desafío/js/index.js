@@ -66,8 +66,3 @@ break
 }
 
 
-/* 
-while (operationType !== ('Suma')||operationType !== ('suma')||operationType !== ('Resta')||operationType !== ('resta')||operationType !== ('Multiplicación')||operationType !== ('multiplicación')||operationType !== ('Multiplicacion')||operationType !== ('multiplicacion')||operationType !== ('División')||operationType !== ('división')||operationType !== ('Division')||operationType !== ('division'))
-   { prompt('La operación elegida no es correcta, vuelva a intentarlo!')
-
-} */
