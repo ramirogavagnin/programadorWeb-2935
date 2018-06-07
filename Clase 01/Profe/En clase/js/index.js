@@ -162,3 +162,13 @@
 
 // - console.log()
 // - parseInt()
+
+
+function message(firstName, lastName){
+    var message = 'Hola ' + firstName + ' ' + lastName
+    return message
+  }
+  
+  var text = message('Mónica','Perez')
+
+  console.log(text)

@@ -49,7 +49,7 @@ case 'división':
 case 'Division':
 case 'division':
 
-while (persedValue2 <=0) {
+while (persedValue2 === 0) {
 
     prompt('Ingrese el segundo valor y que sea mayor que 0.')
     break
