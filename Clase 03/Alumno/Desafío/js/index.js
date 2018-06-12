@@ -52,7 +52,7 @@ case 'division':
 while (persedValue2 === 0) {
 
     prompt('Ingrese el segundo valor y que sea mayor que 0.')
-    break
+    
 }
 
 console.log('El resultado de la división es ' + resultDiv)

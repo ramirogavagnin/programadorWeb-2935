@@ -1,0 +1,43 @@
+Funtion
+
+si no llamo a la función esta no se ejecuta
+ 
+------
+
+return solo devuelve 1 sola cosa, una var o algo
+
+
+--------
+
+
+https://es.wikipedia.org/wiki/%C3%81lgebra_de_Boole
+
+
+------
+
+
+https://www.w3schools.com/js/js_hoisting.asp
+
+
+----
+
+las funciones javascript te las lleva automaticamente arriba enteras, en cambio las var te las declara pero respeta el lugar donde le fue dado el valor (line 50, 61, etc)
+
+
+----
+
+
+scope local, primero busca dentro de la función, despues en los parametros de la función y despues en el scope global
+
+----
+
+Los parametros para funciones no admiten strings
+
+-----
+
+no modificar el scope global desde mi funcion, se puede ir todo al carajo!
+
+
+------
+
+la funcion se termina en el return, lo que esta por debajo no se ejecuta
