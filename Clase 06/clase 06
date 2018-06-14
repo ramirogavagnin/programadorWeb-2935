@@ -1,0 +1,49 @@
+or ||
+
+es todo false hasta que encuentra un valor true y te devuelve ese valor true
+
+-------
+
+split te pone caracteres entre medio de los objects del array
+
+---------
+
+
+toString = convierte un array en string
+
+
+----
+
+reemplazar en un array
+
+array = [1, 2, 3]
+
+array [0] = 4
+
+reemplaza el 4 por el 1 que esta en la posición [0]
+
+
+--------
+
+slice 
+
+copia objects de un array
+
+
+----------
+
+
+splice
+
+var array = [1,2,3]
+
+array.splice(0,1, 4)
+
+
+en la posición 0 del array elimina 1 elemento y agrega el number 4
+
+
+---------
+Objetos explicación
+
+https://www.youtube.com/watch?v=AAKoccH230Y
