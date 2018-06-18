@@ -4,19 +4,14 @@ var operationType = prompt('Ingrese la operación a relizar: suma, resta, multip
 
 var value1 = prompt('Ingrese el primer valor.')
 
-var value2 = prompt('Ingrese el segundo valor.')
-
 var persedValue1 = parseFloat(value1, 10)
 
-var persedValue2 = parseFloat(value2, 10)
+do {
+    var value2 = prompt('Ingrese el segundo valor.')
+    var persedValue2 = parseFloat(value2, 10)
+}
+while (persedValue2 === 0) 
 
-var resultSum = persedValue1 + persedValue2
-
-var resultRes = persedValue1 - persedValue2
-
-var resultMult = persedValue1 * persedValue2
-
-var resultDiv = persedValue1 / persedValue2
 
 
 
@@ -25,12 +20,16 @@ switch (operationType){
 case 'Suma':
 case 'suma':
 
+var resultSum = persedValue1 + persedValue2
+
 console.log('El resultado de la suma es ' + resultSum)
 
 break
 
 case 'Resta':
 case 'resta':
+
+var resultRes = persedValue1 - persedValue2
 
 console.log('El resultado de la resta es ' + resultRes)
 
@@ -42,6 +41,8 @@ case 'Multiplicacion':
 case 'multiplicacion':
 console.log('El resultado de la multiplicación es ' + resultMult)
 
+var resultMult = persedValue1 * persedValue2
+
 break
 
 case 'División':
@@ -49,18 +50,14 @@ case 'división':
 case 'Division':
 case 'division':
 
-while (persedValue2 === 0) {
-
-    prompt('Ingrese el segundo valor y que sea mayor que 0.')
-    
-}
+var resultDiv = persedValue1 / persedValue2
 
 console.log('El resultado de la división es ' + resultDiv)
 
 break
 default:
- prompt('La operación elegida no es correcta, vuelva a intentarlo!')
-
+ 
+console.log  ('La operación elegida no es correcta, vuelva a intentarlo! (Ctrl+R) ;)')
 
 break
 }

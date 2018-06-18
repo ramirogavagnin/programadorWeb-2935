@@ -25,13 +25,16 @@ else {
 }
 
 else {
-
     return false
 }
 
+}
+
+
+
  
 
-}
+
 
 console.log('First Search ' + includesText('Pa', 'Patricia'))
 
