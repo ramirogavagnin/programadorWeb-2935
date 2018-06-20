@@ -17,7 +17,7 @@ while (persedValue2 === 0)
 
 switch (operationType){
 
-case 'Suma':
+case 'Suma':prompt('La operación elegida no es correcta, vuelva a intentarlo!')
 case 'suma':
 
 var resultSum = persedValue1 + persedValue2

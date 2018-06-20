@@ -37,7 +37,7 @@ splice
 
 var array = [1,2,3]
 
-array.splice(0,1, 4)
+array.splice(0,1,4)
 
 
 en la posición 0 del array elimina 1 elemento y agrega el number 4

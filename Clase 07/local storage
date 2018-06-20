@@ -1,0 +1,53 @@
+JSON.stringify(oj de js) ---->> convierte ojs de js en .JSON
+
+JSON.
+
+
+ABM = alta baja modificación
+
+L.St.
+
+
+1-  traigo info del LS
+
+2-   convierto a JSON
+
+3- 
+
+ A- Agregar
+ B- Eliminar / Baja
+ C- Modificar
+
+4 - convierto a JSON
+
+5 -guardar en LS
+
+_____________________
+
+
+Asincronismo
+
+
+console.log('Hola 1')
+
+
+setTimeout (funtion(){
+
+console.log('Hola 2')
+
+}, 5000)
+
+console.log('Hola 3')
+
+setTimeout es asincrónico por lo que se ejecuta hola 1, hola 3, y pasados 5000ms hola 2
+
+Si en vez de 5000ms hubiese por parametro de tiempo 0ms se ejecutaría en el mismo orden debido
+a que cuando se libera el thred luego del hola 3 ahi recien se ejecuta el hola 2 que estaba en 
+espera dentro del secondary stacker o secondary thred
+
+_____________
+
+que es thred de js es como una fila o cola de espera donde se ejecuta el codigo de js de ma
+
+luego tiene un thred secundario donde entran por ej la funtion setTimeout que pone en espera
+la ejecución de ese código
