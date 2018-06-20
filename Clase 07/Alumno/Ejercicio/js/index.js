@@ -9,10 +9,10 @@ var studentsList = ['CARLOS','GERONIMO','NICOLAS','LUCAS','MARIA','FEDERICO','AN
     if (typeof key === 'string' &&  Array.isArray(array)){
 
         var stringifyStudents = JSON.stringify(array)
-        
+        localStorage.setItem(key, stringifyStudents)
     }
 
-    localStorage.setItem(key, stringifyStudents)
+    
 
 }
 
