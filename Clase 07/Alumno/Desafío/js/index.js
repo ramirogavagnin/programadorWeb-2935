@@ -22,6 +22,8 @@ function getLocalList(key){
 
     var localList = localStorage.getItem(key)
 
+
+
     if(localList === null) {
 
         var array = []

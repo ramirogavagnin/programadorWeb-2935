@@ -1,0 +1,48 @@
+HTML es un DOM (árbol de nodos)
+
+las carpetas de IOS son un árbol de nodos 
+
+Carpeta user
+
+document  photos  download
+
+
+User = padre
+
+Document = hijo
+
+si hay carpetas o elementos dentro de document son hijos de Document
+
+JS
+
+getDocumentById traes un elemento del DOM
+
+
+para remover un hijo de un UL (un li con id=4 ) hago var liNode4 = document.getElementById('4')
+
+liNode4.parentNode.removeChild(liNode4)  -----> con esto lo que hago es le pregunto desde el nodo
+
+liNode4 al padre para remover el hijo (liNode4)
+
+esto sirve mas para compatibilidad con IE
+
+con navegadores mas modernos puedo hacer remove(liNode4) directo
+
+agregar id, class,
+
+nodoX.className = 'clase'
+nodoX.id = 'Y'
+
+_____________-
+
+
+.innerHTML reemplazo todo el contenido
+
+
+.appendChild(someNode)  agregos nodos hiijos
+
+
+-----------------
+
+
+Nota: para el desafio clase 08 pasar los datos de prueba (obj var student) por el model de la clase 05 (desafío)
