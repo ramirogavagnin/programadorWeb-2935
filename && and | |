@@ -1,0 +1,14 @@
+el | | dice :
+
+'' || 0 || 'pato'  = devuelve 'pato'
+
+para el || es todo false, hasta que encuentra un true y devuelve true o el ultimo valor de la cadena.
+Esta bueno para valores default
+------------
+
+
+el && dice que todo tiene que ser true, en cuanto encuentra un false devuelve ese false y rompe la
+cadena, no sigue evaluando.
+Esta bueno para verfificar propiedades o la existencia de tal objeto.
+
+
