@@ -10,7 +10,7 @@ var student = {
 
 
 
-function StudentsCreateFuntion(firstName, lastName, dni, email) {
+function Student(firstName, lastName, dni, email) {
 
     var id = dni
 
@@ -21,32 +21,27 @@ function StudentsCreateFuntion(firstName, lastName, dni, email) {
 
     this.getId = function () {
 
-
-        var id = dni
-
         return id
-
     }
 
     this.getFullName = function () {
 
         return (this.firstName || '') + ' ' + (this.lastName || '')
-
     }
 
 }
 
 
 
-var newStudentObject = new StudentsCreateFuntion(student.firstName, student.lastName, student.dni, student.email)
+var newStudent = new Student(student.firstName, student.lastName, student.dni, student.email)
 
-var newStudent = newStudentObject
+
 
 
 console.log(newStudent)
 
 
-function createStudentNode(student){
+function createStudentNode(newStudent){
 
 
 var mainListNode = document.getElementById('mainList')
@@ -58,8 +53,17 @@ var liNode
     liNode = document.createElement('li')
     liNode.className = 'list-group-item'
     liNode.id = student.dni
-    liNode.innerHTML = '<h1>' + student.firstName + '' + student.lastName + '</h1>' + '<h3>' + student.dni + '</h3>' + '<p>' + student.email + '</p>'
-    mainListNode.appendChild(liNode)
+    liNode.innerHTML = '<h1>' +
+     newStudent.getFullName() + 
+     '</h1>' + 
+     '<h3>' + 
+     newStudent.dni +
+      '</h3>' + 
+      '<p>' +
+       newStudent.email 
+       + '</p>'
+   
+       return liNode
 
 }
 

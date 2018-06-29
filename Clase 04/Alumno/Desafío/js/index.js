@@ -51,7 +51,7 @@ function searchStudentIndexByText (nameOrLastName, studentsList) {
 	if 
 	(nameOrLastName) {
 
-		 return nameOrLastName[0].toUpperCase() + nameOrLastName.slice(1)
+		 return nameOrLastName[0].toUpperCase() + nameOrLastName.slice(1) 
 	}
    
 }
