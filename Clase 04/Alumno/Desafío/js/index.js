@@ -1,6 +1,6 @@
 console.log('desafío clase 04');
 
-var studentsList = [
+var students = [
 	{
 		firstName: 'Juan',
 		lastName: 'Pérez',
@@ -23,36 +23,55 @@ var studentsList = [
 	}
 ];
 
-function search (arrayStudents) {
-    
+// Función para buscar la posición de los alummnos en el array
+// se le da como paramatro un texto ya capitalizado en la posición 0 y un array
+// y compara por nombre o apellido de manera estrictamente igual ===
+
+
+function searchStudentIndexByText (nameOrLastName, studentsList) {
+	var index = -1
+	for (var i = 0; i < studentsList.length; i++) {
+	  var student = studentsList[i]
+	  if (
+		student.firstName === nameOrLastName ||
+		student.lastName === nameOrLastName
+	  ) {
+		index = i
+		break
+	  }
+	}
+	return index
+  }
+  
  
-	var nameSearch = prompt('Ingrese el nombre.');
+  // Funcion para capitalizar la primera letra antes de inciar la busqueda
+ 
+  function capitalize(nameOrLastName)
+{
+	if 
+	(nameOrLastName) {
 
-
-	for (var i = 0; i < arrayStudents.length; i++) {
-       
-if (arrayStudents[i].firstName === nameSearch){
-
-	var messageOfSearch = 'Te encontre en la posición ' + [i]
-	break
-
+		 return nameOrLastName[0].toUpperCase() + nameOrLastName.slice(1)
+	}
+   
 }
 
-else {
+// Variable donde se guarda el nombre que el usuario quiera buscar
+ 
+var text = prompt('Ingrese un nombre')
 
-	var messageOfSearch = 'No te encontre :('
-}
+// Variable donde se guarda la posición del alumno luego de la busqueda
 
-
-    }
-	 
-	return messageOfSearch
-
-}
+var index = searchStudentIndexByText(capitalize (text), students)
 
 
-var studentSearch = search (studentsList);
 
-console.log(studentSearch);
+// Mensaje que muestra en consola si encontro al estudiante + su posición en el array
+// y sino muestra que no lo pudo encontrar
 
+  if (index !== -1) {
+	console.log('Se encontró el estudiante en la posición ' + index)
 
+  } else {
+	console.log('No se pudo encontrar el estudiante')
+  }

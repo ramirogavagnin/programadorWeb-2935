@@ -1,42 +1,30 @@
 console.log('desafío 07')
 
+// Función que busca en el localStorage a partir de una key que se le pasa como parámetro
+// Se verifica que la key sea del tipo string, y si existe nos devuelve la lista parseada
+// sino nos devuelve un array vacío.
 
-var studentsList = ['CARLOS','GERONIMO','NICOLAS','LUCAS','MARIA','FEDERICO','ANTONIO','LORNA','JULIAN','DIEGO','DANIELA','JUAN','MATEO','BARBARA','AGUSTIN','MARIO','MARIEL','ANA','FLORENCIA']
+function getLocalList(key) {
 
+    if (typeof key === 'string') {
 
- function saveLocalList (key, array){
+        var localList = localStorage.getItem(key)
 
-    if (typeof key === 'string' &&  Array.isArray(array)){
+        if (localList) {
 
-        var stringifyStudents = JSON.stringify(array)
-        localStorage.setItem(key, stringifyStudents)
+            var parsedLocaList = JSON.parse(localList)
+            return parsedLocalList
+        } else {
+
+            return []
+        }
     }
-
 }
 
-saveLocalList ('list', studentsList)
 
 
-
-function getLocalList(key){
-
-    var localList = localStorage.getItem(key)
-
-
-
-    if(localList === null) {
-
-        var array = []
-
-        return array
-    }
-
-}
 
 var studentsList = getLocalList('list')
 
 
-
 console.log(studentsList)
-
-
