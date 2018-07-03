@@ -202,13 +202,12 @@ function validateDeleteInputByDni(event) {
     searchStudentIndexByDni(inputNode.value, newStudentsList) === -1
   ) {
     // Caso incorrecto
-    inputNode.classList.remove('is-valid')
+  
     inputNode.classList.add('is-invalid')
     deleteStudentButtonNode.disabled = true
   } else {
     // Caso correcto
     inputNode.classList.remove('is-invalid')
-    inputNode.classList.add('is-valid')
     deleteStudentButtonNode.disabled = false
 
   }
@@ -247,9 +246,6 @@ function deleteStudentNodeByDni(event) {
   deleteStudentInputNode.value = ''
 
 
-  deleteStudentInputNode.classList.remove('is-valid')
-
-
   deleteStudentButtonNode.disabled = true
 
 
@@ -283,6 +279,81 @@ if (!inputNode.value ||
       validateButton()
 
     }
+
+
+// Levanto el nodo de búsqueda
+
+ var searchInputNode = document.getElementById('searchText')
+
+ var searchInputButton = document.getElementById('searchStudentButton')
+
+ searchInputButton.onclick = searchStudentNodeByNameOrLastName
+
+
+ var searchListNode = document.getElementById('searchList')
+
+ 
+
+ function searchStudentNodeByNameOrLastName (event) {
+
+
+var index =  searchStudentIndexByText (searchInputNode.value, newStudentsList)
+
+searchListNode.innerHTML = ''
+
+if (index !== -1) {
+var student = newStudentsList [index]
+
+var liNode = createStudentNode(student)
+
+searchListNode.appendChild(liNode) 
+}
+
+
+ }
+
+
+
+
+
+ // Función desafío 04 que busca por coincidencia exacta
+
+ function searchStudentIndexByText (nameOrLastName, studentsList) {
+	var index = -1
+	for (var i = 0; i < studentsList.length; i++) {
+	  var student = studentsList[i]
+	  if (
+      includesText (nameOrLastName, student.firstName) ||
+      includesText (nameOrLastName, student.lastName)
+	  ) {
+		index = i
+		break
+	  }
+	}
+	return index
+  }
+
+  
+
+  
+ // Función desafío 06 Busca por concidencia por nombre o apellido
+ 
+ function includesText (text, baseText) {
+    // Valido que ambos parámetros sean string
+    if (typeof text === 'string' && typeof baseText === 'string') {
+      // Verifico si el primer parámetro se encuentra dentro del segundo
+      var textUpperCase = text.toUpperCase()
+      var baseTextUpperCase = baseText.toUpperCase()
+      if (baseTextUpperCase.indexOf(textUpperCase) !== -1) {
+        return true
+      } else {
+        return false
+      }
+    } else {
+      return false
+    }
+  }
+
 
 // Funcion desafío clase 08
 
