@@ -7,19 +7,19 @@ inputEmailNode.onblur = validateInputEmail
 
 function validateInputEmail(event){
 
-var node = event.target
+var inputNode = event.target
 
 
-if (node.value && node.value.indexOf('@') > 0 && node.value.indexOf('.') > 0) {
+if (!inputNode.value || 
+  inputNode.value.indexOf('@') === -1 || 
+  inputNode.value.indexOf('.') === -1) 
+  {
+    inputNode.classList.remove('is-valid')
+    inputNode.classList.add('is-invalid')
 
-    node.classList.remove('is-invalid')
-    node.classList.add('is-valid')
-  
-}
-  else {
-    
-        node.classList.remove('is-valid')
-        node.classList.add('is-invalid')
+  } else{  
+    inputNode.classList.remove('is-invalid')
+    inputNode.classList.add('is-valid')
       }  
 
     }

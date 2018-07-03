@@ -97,7 +97,10 @@ function validateButton () {
 addStudentButtonNode.onclick = addStudent
 
 function addStudent (event) {
+  
+
   var firstName = firstNameInputNode.value
+  
   var dni = dniInputNode.value
 
   var newStudent = new Student(firstName, null, dni, null)

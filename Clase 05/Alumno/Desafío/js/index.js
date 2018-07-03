@@ -22,7 +22,7 @@ var students = [
     }
   ]
 
-  function StudentsTemplateFuntion (firstName, lastName, dni, email) {
+  function Student (firstName, lastName, dni, email) {
 
 var id = dni
 
@@ -54,7 +54,7 @@ var newStudents = []
 
 for (i = 0; i < students.length; i++){
   
-  var student = new StudentsTemplateFuntion (students[i].firstName, students[i].lastName, students[i].dni, students[i].email)
+  var student = new Student (students[i].firstName, students[i].lastName, students[i].dni, students[i].email)
   newStudents.push(student)
   
 }
