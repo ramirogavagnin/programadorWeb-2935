@@ -287,14 +287,14 @@ if (!inputNode.value ||
 
  var searchInputButton = document.getElementById('searchStudentButton')
 
- searchInputButton.onclick = searchStudentNodeByNameOrLastName
+ searchInputButton.onclick = searchStudentByNameOrLastName
 
 
  var searchListNode = document.getElementById('searchList')
 
  
 
- function searchStudentNodeByNameOrLastName (event) {
+ function searchStudentByNameOrLastName (event) {
 
 
 var index =  searchStudentIndexByText (searchInputNode.value, newStudentsList)
