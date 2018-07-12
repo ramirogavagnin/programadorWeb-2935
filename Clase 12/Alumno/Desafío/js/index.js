@@ -22,8 +22,6 @@ value.length <= 9 ){
 else {
     inputNode.removeClass('is-invalid')
     inputNode.addClass('is-valid')
-
 }
-    
 
 }
