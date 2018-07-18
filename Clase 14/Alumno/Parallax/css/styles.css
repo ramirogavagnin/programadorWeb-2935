@@ -1,0 +1,71 @@
+@font-face {
+  font-family: PinkFloyd;
+  src: local("PinkFloyd"), url(../fonts/floyd.TTF);
+  font-weight: bold;
+}
+
+#background1 {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#background1B {
+  z-index: 1;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#background2 {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+#background3 {
+  z-index: 3;
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+#background4 {
+  z-index: 4;
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+.triangle-of-light {
+  width: 400px;
+  margin-left: 20px;
+  margin-top: 100px;
+}
+
+.moon {
+  width: 160px;
+  margin-right: 100px;
+  margin-left: auto;
+}
+
+.introduction {
+  font-family: 'PinkFloyd' !important;
+  width: 70%;
+  margin: auto;
+  font-size: 48px;
+  color: azure;
+}
+
+.logo-img {
+  width: 60%;
+  margin: auto;
+}
+
+.parallaxText-img {
+  width: 100%;
+}
