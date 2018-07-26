@@ -1,3 +1,5 @@
+'use stric'
+
 var webpack = require('webpack')
 
 module.exports = {
