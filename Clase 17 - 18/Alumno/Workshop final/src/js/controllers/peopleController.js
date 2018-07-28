@@ -116,34 +116,7 @@ function peopleController() {
               break
 
           }
-
-        
       
-        
-
-       /*  if(index !==-1){
-          rowNode.remove()
-        
-      }else {
-
-        console.log('No esta en el localStorage')
-
-for (var i = 0; i < results.length; i++){
-      
-          var person = results[i]
-        
-          if(person.url===id){ 
-
-        peopleList.push(person)
-
-        setLocalList('peopleList', peopleList)
-
-        rowNode.remove()
-        
-       } 
-      }
-      } */
-       
      })
       
     }

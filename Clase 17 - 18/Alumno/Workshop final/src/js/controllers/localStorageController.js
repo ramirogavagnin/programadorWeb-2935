@@ -52,37 +52,6 @@ function localStorageController () {
       rowNode.remove()
     }
 
- /* var peopleList2 = getLocalList('peopleList')
-
-      console.log(peopleList2)
-    
-      var tableBodyNode = $('#tableBody')
-      
-      tableBodyNode.html('')
-
-     for (var i = 0; i < peopleList2.length; i++) {
-        var person2 = peopleList2[i]
-        
-      
-        tableBodyNode.append(
-          '<tr id="' +
-            person2.url +
-            '"><th scope="row" >' +
-            (i + 1) +
-            '</th><td>' +
-            person2.name +
-            '</td><td>' +
-            genderTranslate(person2.gender) +
-            '</td><td>' +
-            person2.height +
-            ' cm</td><td>' +
-            person2.mass +
-            ' kg</td><td>' +
-            eyeColorTranslate(person2.eye_color) +
-            '</td><td><button type="button" class="btn btn-danger">Eliminar</button></td></tr>'
-        )
-      } */
-
   })
 }
 
