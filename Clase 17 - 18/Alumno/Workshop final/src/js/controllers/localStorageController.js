@@ -1,38 +1,25 @@
-import { getLocalList, setLocalList } from '../utils/localStorage'
+import {
+  getLocalList,
+  setLocalList
+} from '../utils/localStorage'
 
-import { genderTranslate, eyeColorTranslate } from '../utils/translates'
 
-import { searchPeopleIndexByUrl } from '../utils/search'
+import {
+  pushTableContentFromLocalStorage
+} from '../utils/tables'
 
-function localStorageController () {
+import {
+  searchPeopleIndexByUrl
+} from '../utils/search'
+
+function localStorageController() {
+
   console.log('Soy el localStorage')
 
   var peopleList = getLocalList('peopleList')
-  
-  var tableBody = $('#tableBody')
-  
- for (var i = 0; i < peopleList.length; i++) {
-    var person = peopleList[i]
-    
-  
-    tableBody.append(
-      '<tr id="' +
-        person.url +
-        '"><th scope="row" >' +
-        (i + 1) +
-        '</th><td>' +
-        person.name +
-        '</td><td>' +
-        genderTranslate(person.gender) +
-        '</td><td>' +
-        person.height +
-        ' cm</td><td>' +
-        person.mass +
-        ' kg</td><td>' +
-        eyeColorTranslate(person.eye_color) +
-        '</td><td><button type="button" class="btn btn-danger">Eliminar</button></td></tr>'
-    )
-  }
+
+  pushTableContentFromLocalStorage(peopleList)
+
 
   $('.btn-danger').click(function () {
     console.log('Me apretaron')
@@ -48,8 +35,10 @@ function localStorageController () {
       peopleList.splice(index, 1)
 
       setLocalList('peopleList', peopleList)
-      
-      rowNode.remove()
+
+      rowNode.hide(200, function(){
+        rowNode.remove()
+    })
     }
 
   })
