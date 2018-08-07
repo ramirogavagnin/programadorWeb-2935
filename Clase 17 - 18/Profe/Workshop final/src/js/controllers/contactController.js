@@ -92,7 +92,7 @@ function contactController () {
       comments: comments
     }
 
-    postData('./simpleEmail.php', data, function (error, data) {
+    postData('simpleEmail.php', data, function (error, data) {
       if (!error) {
         window.location.hash = '#/contact/greetings'
       }

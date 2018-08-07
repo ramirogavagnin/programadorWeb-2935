@@ -9,6 +9,10 @@ function router () {
     $('#root').load('./partials/contact.html', contactController)
   })
 
+  crossroads.addRoute('#/contact/greetings', function () {
+    $('#root').load('./partials/greetings.html')
+  })
+
   crossroads.addRoute('#/local-storage', function () {
     $('#root').load('./partials/local-storage.html', localStorageController)
   })

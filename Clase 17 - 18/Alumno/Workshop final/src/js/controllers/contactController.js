@@ -1,6 +1,8 @@
+import { postData } from '../utils/ajax'
+
 function contactController () {
   console.log('Soy el contact')
-  console.log('Hola')
+
 
   var firstNameInputNode = $('#firstName')
   var emailInputNode = $('#email')
@@ -24,15 +26,17 @@ function contactController () {
     }
 
     if (errorText) {
-      inputNode.addClass('is-invalid')
+      
       inputNode.removeClass('is-valid')
+      inputNode.addClass('is-invalid')
 
       var parentNode = inputNode.parent()
 
       parentNode.append('<div class="invalid-feedback">' + errorText + '</div>')
     } else {
-      inputNode.addClass('is-valid')
+      
       inputNode.removeClass('is-invalid')
+      inputNode.addClass('is-valid')
     }
 
     if (event.type === 'blur') {
@@ -41,6 +45,26 @@ function contactController () {
 
     validateButton()
   }
+
+  submitButtonNode.click(function () {
+    var firstName = firstNameInputNode.val()
+    var email = emailInputNode.val()
+    var comments = commentsInputNode.val()
+
+    var data = {
+      firstName: firstName,
+      email: email,
+      comments: comments
+    }
+/* 
+    postData('./simpleEmail.php', data, function (error, data) {
+      if (!error) { */
+       
+        window.location.hash = '#/contact/greetings'
+
+    /*   }
+  }) */
+})
 
   function validateEmailField (event) {
     var inputNode = $(this)
@@ -89,7 +113,8 @@ function contactController () {
     } else {
       submitButtonNode.attr('disabled', true)
     }
-  }
+}
+
 }
 
 export default contactController

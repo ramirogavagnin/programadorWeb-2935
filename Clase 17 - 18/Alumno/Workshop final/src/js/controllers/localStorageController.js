@@ -1,47 +1,31 @@
 import {
   getLocalList,
-  setLocalList
+  
 } from '../utils/localStorage'
 
+import {
+  buttonEventClick
+} from '../utils/buttonEventListener'
+
 
 import {
-  pushTableContentFromLocalStorage
+  pushTableContent
 } from '../utils/tables'
 
-import {
-  searchPeopleIndexByUrl
-} from '../utils/search'
+
 
 function localStorageController() {
 
-  console.log('Soy el localStorage')
-
   var peopleList = getLocalList('peopleList')
 
-  pushTableContentFromLocalStorage(peopleList)
+  pushTableContent(peopleList)
 
-
-  $('.btn-danger').click(function () {
-    console.log('Me apretaron')
+  $('button').click(function () {
     var buttonNode = $(this)
+  
+    buttonEventClick(null, buttonNode)
+      })
 
-    var rowNode = buttonNode.parent().parent()
-
-    var id = rowNode.attr('id')
-
-    var index = searchPeopleIndexByUrl(id, peopleList)
-
-    if (index !== -1) {
-      peopleList.splice(index, 1)
-
-      setLocalList('peopleList', peopleList)
-
-      rowNode.hide(200, function(){
-        rowNode.remove()
-    })
-    }
-
-  })
 }
 
 export default localStorageController
