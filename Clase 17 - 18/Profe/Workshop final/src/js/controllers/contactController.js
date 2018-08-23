@@ -1,7 +1,6 @@
 import { postData } from '../utils/ajax'
 
 function contactController () {
-  console.log($(window).height())
   var firstNameInputNode = $('#firstName')
   var emailInputNode = $('#email')
   var commentsInputNode = $('#comments')

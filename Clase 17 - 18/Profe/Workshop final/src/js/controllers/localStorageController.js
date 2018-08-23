@@ -5,11 +5,7 @@ import { genderTranslate, eyeColorTranslate } from '../utils/translates'
 import { searchPeopleIndexByUrl } from '../utils/search'
 
 function localStorageController () {
-  console.log('Soy el localStorage')
-
   var peopleList = getLocalList('peopleList')
-
-  console.log(peopleList)
 
   var tableBody = $('#tableBody')
 
@@ -36,7 +32,6 @@ function localStorageController () {
   }
 
   $('.btn-danger').click(function () {
-    console.log('Me apretaron')
     var buttonNode = $(this)
 
     var rowNode = buttonNode.parent().parent()

@@ -1,5 +1,3 @@
-function homeController () {
-  console.log('Soy el Home')
-}
+function homeController () {}
 
 export default homeController

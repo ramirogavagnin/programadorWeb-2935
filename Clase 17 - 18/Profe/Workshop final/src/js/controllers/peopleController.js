@@ -6,30 +6,16 @@ import { searchPeopleIndexByUrl } from '../utils/search'
 
 import { getData } from '../utils/ajax'
 
-function searchController () {
-  searchPeople()
-
-  var searchButtonNode = $('#searchButton')
-
-  searchButtonNode.click(searchPeople)
-}
-
-function searchPeople () {
-  var searchInputNode = $('#search')
-
-  var value = searchInputNode.val()
-
-  var startUrl = 'https://swapi.co/api/people/?search=' + value
-
+function peopleController () {
   var peopleApiList = []
 
   var peopleLocalList = getLocalList('peopleList')
 
   var tableBody = $('#tableBody')
 
-  tableBody.empty()
-
   var seeMoreButton = $('#seeMore')
+
+  var startUrl = 'https://swapi.co/api/people/'
 
   searchPeople(startUrl)
 
@@ -103,4 +89,4 @@ function searchPeople () {
   }
 }
 
-export default searchController
+export default peopleController
