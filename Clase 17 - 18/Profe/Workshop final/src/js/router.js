@@ -3,6 +3,7 @@ import crossroads from 'crossroads'
 import contactController from './controllers/contactController'
 import localStorageController from './controllers/localStorageController'
 import searchController from './controllers/searchController'
+import peopleController from './controllers/peopleController'
 
 function router () {
   crossroads.addRoute('#/search', function () {
@@ -22,7 +23,7 @@ function router () {
   })
 
   crossroads.addRoute('#/people', function () {
-    $('#root').load('./partials/people.html')
+    $('#root').load('./partials/people.html', peopleController)
   })
 
   crossroads.addRoute('/', function () {
