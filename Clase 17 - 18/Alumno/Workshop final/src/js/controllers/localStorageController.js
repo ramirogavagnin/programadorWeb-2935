@@ -16,6 +16,13 @@ import {
 
 function localStorageController() {
 
+  var location = window.location.hash
+  
+  if (location === '#/local-storage'){
+
+    $('body').css("background-image", "url(../img/saved.jpg)");  
+  }
+
   var peopleList = getLocalList('peopleList')
 
   pushTableContent(peopleList)

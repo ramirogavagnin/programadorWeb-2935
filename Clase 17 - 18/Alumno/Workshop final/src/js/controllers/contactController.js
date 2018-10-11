@@ -1,7 +1,13 @@
 import { postData } from '../utils/ajax'
 
 function contactController () {
-  console.log('Soy el contact')
+
+  var location = window.location.hash
+
+  if (location === '#/contact'){
+
+    $('body').css("background-image", "url(../img/contact.jpg)");  
+  }
 
 
   var firstNameInputNode = $('#firstName')

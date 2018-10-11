@@ -1,5 +1,11 @@
 function homeController () {
-  console.log('Soy el Home')
+ 
+  var location = window.location.hash
+  
+  if (location === ''){
+
+    $('body').css("background-image", "url(../img/home.jpg)");  
+  }
 }
 
 export default homeController

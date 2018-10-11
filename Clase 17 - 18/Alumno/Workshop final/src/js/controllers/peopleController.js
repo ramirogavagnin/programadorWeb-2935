@@ -13,6 +13,13 @@ import {
 
 function peopleController() {
 
+  var location = window.location.hash
+
+  if (location === '#/people'){
+
+    $('body').css("background-image", "url(../img/people.jpg)");  
+  }
+
   getData('https://swapi.co/api/' + 'people/', callBack)
 
 
