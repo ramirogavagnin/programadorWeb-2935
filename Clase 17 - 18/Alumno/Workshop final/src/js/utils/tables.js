@@ -1,6 +1,8 @@
 import {
   genderTranslate,
-  eyeColorTranslate
+  eyeColorTranslate,
+  massTranslate,
+  heightTranslate
 } from '../utils/translates'
 
 // Función que pushea el contenido de nuestra tabla según la pantalla correspondiente
@@ -31,10 +33,10 @@ function pushTableContent(array) {
           '</td><td>' +
           genderTranslate(person.gender) +
           '</td><td>' +
-          person.height +
-          ' cm</td><td>' +
-          person.mass +
-          ' kg</td><td>' +
+          heightTranslate(person.height) +
+          '</td><td>' +
+          massTranslate(person.mass) +
+          '</td><td>' +
           eyeColorTranslate(person.eye_color) +
           '</td><td><button type="button" class="btn btn-success">Guardar</button></td></tr>'
         )
@@ -52,10 +54,10 @@ function pushTableContent(array) {
           '</td><td>' +
           genderTranslate(person.gender) +
           '</td><td>' +
-          person.height +
-          ' cm</td><td>' +
-          person.mass +
-          ' kg</td><td>' +
+          heightTranslate(person.height) +
+          '</td><td>' +
+          massTranslate(person.mass) +
+          '</td><td>' +
           eyeColorTranslate(person.eye_color) +
           '</td><td><button type="button" class="btn btn-danger">Eliminar</button></td></tr>'
         )
@@ -69,8 +71,6 @@ function pushTableContent(array) {
 
 
 }
-
-
 
 
 export {

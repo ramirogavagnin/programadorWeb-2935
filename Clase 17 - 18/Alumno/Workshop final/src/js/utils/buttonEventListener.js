@@ -76,22 +76,3 @@ if (location === '#/people') {
 export {  buttonEventClick }
 
 
-
-/* if (buttonNode.hasClass('.btn-success')) {
-
-   
-
-if (buttonNode.hasClass('.btn-danger')) {
-
-    switch (index) {
-        case -1:
-            peopleList.splice(index, 1)
-
-            setLocalList('peopleList', peopleList)
-
-            rowNode.remove()
-            break
-    }
-}
-
- */
