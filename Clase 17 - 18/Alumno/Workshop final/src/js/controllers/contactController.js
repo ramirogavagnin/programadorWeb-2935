@@ -1,12 +1,12 @@
 import { postData } from '../utils/ajax'
 
-function contactController () {
+function contactController() {
 
   var location = window.location.hash
 
-  if (location === '#/contact'){
+  if (location === '#/contact') {
 
-   $('body').css("background-image", "url(../img/contact.jpg)") 
+    $('body').css("background-image", "url(../img/contact.jpg)")
   }
 
 
@@ -21,7 +21,7 @@ function contactController () {
 
   commentsInputNode.one('blur', validateEmtpyField)
 
-  function validateEmtpyField (event) {
+  function validateEmtpyField(event) {
     var inputNode = $(this)
 
     var errorText = ''
@@ -32,7 +32,7 @@ function contactController () {
     }
 
     if (errorText) {
-      
+
       inputNode.removeClass('is-valid')
       inputNode.addClass('is-invalid')
 
@@ -40,7 +40,7 @@ function contactController () {
 
       parentNode.append('<div class="invalid-feedback">' + errorText + '</div>')
     } else {
-      
+
       inputNode.removeClass('is-invalid')
       inputNode.addClass('is-valid')
     }
@@ -62,17 +62,22 @@ function contactController () {
       email: email,
       comments: comments
     }
-/* 
-    postData('./simpleEmail.php', data, function (error, data) {
-      if (!error) { */
-       
-        window.location.hash = '#/contact/greetings'
+    /* 
+        postData('./simpleEmail.php', data, function (error, data) {
+          if (!error) { */
+
+    window.location.hash = '#/contact/greetings'
+
+    if (location === '#/contact/greetings') {
+
+      $('body').css("background-image", "url(../img/contact.jpg)")
+    }
 
     /*   }
   }) */
-})
+  })
 
-  function validateEmailField (event) {
+  function validateEmailField(event) {
     var inputNode = $(this)
 
     var errorText = ''
@@ -111,7 +116,7 @@ function contactController () {
     validateButton()
   }
 
-  function validateButton () {
+  function validateButton() {
     var validInputNodes = $('.is-valid')
 
     if (validInputNodes.length === 3) {
@@ -119,7 +124,7 @@ function contactController () {
     } else {
       submitButtonNode.attr('disabled', true)
     }
-}
+  }
 
 }
 
