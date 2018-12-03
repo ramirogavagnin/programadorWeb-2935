@@ -6,7 +6,7 @@ function contactController () {
 
   if (location === '#/contact'){
 
-    $('body').css("background-image", "url(../img/contact.jpg)");  
+   $('body').css("background-image", "url(../img/contact.jpg)") 
   }
 
 

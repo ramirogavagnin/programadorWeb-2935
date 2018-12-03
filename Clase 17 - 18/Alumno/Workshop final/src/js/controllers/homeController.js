@@ -4,7 +4,7 @@ function homeController () {
   
   if (location === ''){
 
-    $('body').css("background-image", "url(../img/home.jpg)");  
+      $('body').css("background-image", "url(../img/home.jpg)")
   }
 }
 

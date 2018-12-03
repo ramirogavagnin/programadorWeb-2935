@@ -52,6 +52,9 @@ function eyeColorTranslate(eyeColor) {
     case 'blue':
       return 'Azul'
       break
+      case 'dark':
+      return 'oscuros'
+      break
     case 'black':
       return 'Negros'
       break
@@ -88,6 +91,9 @@ function eyeColorTranslate(eyeColor) {
     case 'brown':
       return 'Castaño'
       break
+      case 'unknown':
+return 'desconocido'
+break
     default:
       return eyeColor
       break

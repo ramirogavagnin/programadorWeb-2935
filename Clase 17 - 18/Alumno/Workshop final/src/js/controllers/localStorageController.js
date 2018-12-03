@@ -20,7 +20,7 @@ function localStorageController() {
   
   if (location === '#/local-storage'){
 
-    $('body').css("background-image", "url(../img/saved.jpg)");  
+ $('body').css("background-image", "url(../img/saved.jpg)")
   }
 
   var peopleList = getLocalList('peopleList')

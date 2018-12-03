@@ -17,7 +17,7 @@ function peopleController() {
 
   if (location === '#/people'){
 
-    $('body').css("background-image", "url(../img/people.jpg)");  
+     $('body').css("background-image", "url(../img/people.jpg)")
   }
 
   getData('https://swapi.co/api/' + 'people/', callBack)
